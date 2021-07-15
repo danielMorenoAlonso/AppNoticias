@@ -1,0 +1,57 @@
+
+<div class=" animated animate fadeIn faster container mt-5 contenedor-form">
+  <div>
+    <div class="text-center">
+      <i class="fas fa-user-circle fa-5x"></i>
+    </div>
+    
+    <h1 class="text-center mb-5">Iniciar Sesión</h1>
+  </div>
+
+    <form (ngSubmit)="logIn(f)" 
+          #f="ngForm"
+          class="formulario">
+      <fieldset>
+        <span *ngIf="f.submitted && f.controls['email'].errors"
+              class="text-danger animated fadeIn faster">El correo es obligatorio</span>
+        <label for="email">E-mail</label>
+        <input type="email" 
+               name="email"
+               [(ngModel)]="usuario.email"
+               required
+               email
+               placeholder="severus@hogwarts.com">
+
+        <span *ngIf="f.submitted && f.controls['password'].errors"
+              class="text-danger animated fadeIn faster">La contraseña debe de ser más de 6 letras</span>
+        <label for="pass">Contraseña</label>
+        <input type="password"  
+               name="password"
+               [(ngModel)]="usuario.password"
+               required
+               minlength="6"
+               placeholder="Contraseña">
+
+        <div class="mb-3 form-check">
+          <input [(ngModel)]="remember" type="checkbox" class="form-check-input" name="remember-me" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1"> <span>Recordar usuario</span> </label>
+        </div>
+      </fieldset>
+
+      <div class="mb-3">
+        <a routerLink="/signup">
+            ¿No tienes cuenta? / Registrate
+        </a>
+      </div>
+
+      <div class="text-end">
+        <button type="submit" class="btn btn-success">
+          <i class="fas fa-sign-in-alt"></i>
+          Ingresar
+        </button>
+      </div>
+      
+    </form>
+
+</div>
+

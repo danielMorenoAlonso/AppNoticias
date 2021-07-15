@@ -1,0 +1,63 @@
+<div>
+    <nav class="navbar navbar-light" style="background-color: #ecf5fc;">
+        <div class="navegacion container-fluid">
+          <a class="navbar-brand" href="/home"><img src="../../../assets/img/bambu.png" alt="Bambu mobile" class="logoBambu"></a>
+          <p class="tituloP">Noticias</p>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-user-circle" aria-hidden="true">
+            </i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="boton-help">
+              <button (click)="salir()" class="btn btn-danger">
+                <i class="fas fa-sign-out-alt"></i>
+                Cerrar sesión
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+</div>
+
+<div class="container mt-5">
+
+    <h1>Lo más actualizado</h1>
+    <hr style="margin-bottom: 2rem;">
+
+    <div class="opciones">
+        <select class="form-select"
+                (change)="onClick($event)">
+            <option selected disabled>País</option>
+            <option *ngFor="let item of paises"
+                    [value]="item.code"> {{item.nombre}} </option>
+        </select>
+
+          <select class="form-select"
+                  (change)="funcCategoria($event)">
+            <option selected disabled>Categoría</option>
+            <option *ngFor="let item of categorias"
+                    [value]="item"> {{item}} </option>
+        </select>
+        <button class="btn btn-success"
+                (click)="buscar()">Buscar</button>
+    </div>
+
+    <div class="contenedor-anuncios">
+
+        <div *ngFor="let item of noticiasArray" class="box" >
+            <div class="card">
+                <img [src]="item.urlToImage" class="card-img-top" alt="No image" width="100%">
+                <div class="card-body">
+                  <h5 class="card-title"> {{item.title}} </h5>
+                  <p class="card-text"> Publicado: {{item.datePublished}} </p>
+                  <p class="card-text"> Por: {{item.author}} </p>
+                  <a [href]="item.url" target="_blank" class="btn btn-outline-info">Leer más</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">&copy; 2021 Todos los derechos reservados Daniel Moreno Alonso</footer>

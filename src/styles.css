@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Noto Sans', sans-serif;
+}
+.container {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/*Formularios*/
+.formulario label{
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.formulario input:not([type="submit"],[type="checkbox"]){
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn{
+    display: block;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .btn{
+        width: auto;
+    }
+
+    .contenedor-form {
+        width: 50%;
+        max-width: 120rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+}
+
+label span{
+    font-weight: lighter;
+    font-size: 0.9rem;
+    text-transform: none;
+}
+

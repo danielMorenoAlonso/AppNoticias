@@ -1,0 +1,94 @@
+
+@media (min-width: 768px) {
+    .contenedor-anuncios {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .opciones {
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+}
+
+.box { 
+    margin-bottom: 2rem;
+}
+
+.opciones { 
+    margin-bottom: 3rem;
+}
+
+
+.form-select{
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .form-select{
+        margin-bottom: 0;
+    }
+}
+
+.boton-help{
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .boton-help {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.tituloP{
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+    .card-img-top{
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
+}
+
+.navbar-brand{
+    margin-right: 0;
+}
+.logoBambu{
+    width: 168px;
+    height: 81px
+}
+.navbar-toggler {
+    margin-top: 1rem;
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar-toggler {
+        margin-top: 0;
+    }
+}
+
+.footer{
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: #ecf5fc;
+}
+
